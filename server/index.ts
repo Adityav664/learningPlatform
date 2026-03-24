@@ -3,6 +3,7 @@ import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 
+
 const app = express();
 const httpServer = createServer(app);
 
@@ -93,7 +94,7 @@ app.use((req, res, next) => {
   httpServer.listen(
     {
       port,
-      host: "127.0.0.1",  // change from 0.0.0.0
+      host: "0.0.0.0",  // change from 0.0.0.0
     },
     () => {
       log(`serving on port ${port}`);
